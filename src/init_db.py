@@ -32,6 +32,21 @@ sample_products = [
      "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MR9A3ref_VW_34FR+watch-45-alum-midnight-nc-9s_VW_34FR_WF_CO?wid=200"),
     ("AirPods Pro (2nd gen)", "Adaptive Audio. Now in USB-C.", 249.00, "AirPods",
      "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQD83?wid=200"),
+
+    ("Apple Vision Pro", "Revolutionary spatial computer with immersive experiences.", 3499.00, "Vision",
+     "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/vision-pro-gallery-1?wid=200"),
+
+    ("Mac Mini M4", "Compact desktop powered by Apple Silicon.", 699.00, "Mac",
+     "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-mini-select-202410?wid=200"),
+
+    ("iPhone 16 Pro", "Next-generation iPhone with enhanced AI features.", 1199.00, "iPhone",
+     "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-pro-finish-select?wid=200"),
+
+    ("Apple Watch Ultra 2", "The most rugged and capable Apple Watch.", 799.00, "Watch",
+     "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-ultra-2?wid=200"),
+
+    ("Magic Keyboard", "Wireless keyboard with Touch ID for Mac.", 199.00, "Accessories",
+     "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MK2A3?wid=200"),
 ]
 
 cursor.executemany("""
