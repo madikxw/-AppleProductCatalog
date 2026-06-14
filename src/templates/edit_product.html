@@ -13,94 +13,72 @@ Edit Product
         <div class="card shadow-sm">
 
             <div class="card-header">
-                <h2 class="mb-0">
-                    Edit Apple Product
-                </h2>
+                <h2 class="mb-0">Edit Apple Product</h2>
             </div>
 
             <div class="card-body">
 
-                <form>
+                <form action="/edit/{{ product['id'] }}" method="POST">
 
                     <div class="mb-3">
-                        <label class="form-label">
-                            Product Name
-                        </label>
-
+                        <label class="form-label">Product Name</label>
                         <input
                                 type="text"
+                                name="name"
                                 class="form-control"
-                                value="MacBook Pro 16"
+                                value="{{ product['name'] }}"
+                                required
                         >
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">
-                            Description
-                        </label>
-
+                        <label class="form-label">Description</label>
                         <textarea
+                                name="description"
                                 class="form-control"
                                 rows="4"
-                        >Apple M4 Pro chip, 18GB RAM, 512GB SSD</textarea>
+                                required
+                        >{{ product['description'] }}</textarea>
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">
-                            Price ($)
-                        </label>
-
+                        <label class="form-label">Price ($)</label>
                         <input
                                 type="number"
+                                name="price"
                                 class="form-control"
-                                value="2499"
+                                value="{{ product['price'] }}"
+                                min="0"
+                                step="0.01"
+                                required
                         >
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">
-                            Category
-                        </label>
-
-                        <select class="form-select">
-
-                            <option selected>Mac</option>
-                            <option>iPhone</option>
-                            <option>iPad</option>
-                            <option>Watch</option>
-                            <option>Accessories</option>
-
+                        <label class="form-label">Category</label>
+                        <select name="category" class="form-select" required>
+                            <option value="Mac"         {% if product['category'] == 'Mac' %}selected{% endif %}>Mac</option>
+                            <option value="iPhone"      {% if product['category'] == 'iPhone' %}selected{% endif %}>iPhone</option>
+                            <option value="iPad"        {% if product['category'] == 'iPad' %}selected{% endif %}>iPad</option>
+                            <option value="Watch"       {% if product['category'] == 'Watch' %}selected{% endif %}>Watch</option>
+                            <option value="AirPods"     {% if product['category'] == 'AirPods' %}selected{% endif %}>AirPods</option>
+                            <option value="Accessories" {% if product['category'] == 'Accessories' %}selected{% endif %}>Accessories</option>
                         </select>
                     </div>
 
                     <div class="mb-4">
-                        <label class="form-label">
-                            Image URL
-                        </label>
-
+                        <label class="form-label">Image URL</label>
                         <input
                                 type="text"
+                                name="image_url"
                                 class="form-control"
-                                value="https://example.com/macbook.jpg"
+                                value="{{ product['image_url'] }}"
                         >
                     </div>
 
                     <div class="d-flex gap-2">
-
-                        <button
-                                type="submit"
-                                class="btn btn-warning"
-                        >
-                            Update Product
-                        </button>
-
-                        <a
-                                href="/"
-                                class="btn btn-secondary"
-                        >
-                            Cancel
-                        </a>
-
+                        <button type="submit" class="btn btn-warning">Update Product</button>
+                        <a href="/" class="btn btn-secondary">Cancel</a>
                     </div>
 
                 </form>
