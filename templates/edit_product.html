@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+
+{% block title %}
+Edit Product
+{% endblock %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+
+    <div class="col-lg-8">
+
+        <div class="card shadow-sm">
+
+            <div class="card-header">
+                <h2 class="mb-0">
+                    Edit Apple Product
+                </h2>
+            </div>
+
+            <div class="card-body">
+
+                <form>
+
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Product Name
+                        </label>
+
+                        <input
+                                type="text"
+                                class="form-control"
+                                value="MacBook Pro 16"
+                        >
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Description
+                        </label>
+
+                        <textarea
+                                class="form-control"
+                                rows="4"
+                        >Apple M4 Pro chip, 18GB RAM, 512GB SSD</textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Price ($)
+                        </label>
+
+                        <input
+                                type="number"
+                                class="form-control"
+                                value="2499"
+                        >
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Category
+                        </label>
+
+                        <select class="form-select">
+
+                            <option selected>Mac</option>
+                            <option>iPhone</option>
+                            <option>iPad</option>
+                            <option>Watch</option>
+                            <option>Accessories</option>
+
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label">
+                            Image URL
+                        </label>
+
+                        <input
+                                type="text"
+                                class="form-control"
+                                value="https://example.com/macbook.jpg"
+                        >
+                    </div>
+
+                    <div class="d-flex gap-2">
+
+                        <button
+                                type="submit"
+                                class="btn btn-warning"
+                        >
+                            Update Product
+                        </button>
+
+                        <a
+                                href="/"
+                                class="btn btn-secondary"
+                        >
+                            Cancel
+                        </a>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

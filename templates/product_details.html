@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title %}
+Product Details
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+
+    <div class="col-md-5">
+
+        <img
+                src="https://picsum.photos/700/500?random=11"
+                class="img-fluid rounded shadow"
+                alt="MacBook Pro"
+        >
+
+    </div>
+
+    <div class="col-md-7">
+
+        <h1 class="mb-3">
+            MacBook Pro 16
+        </h1>
+
+        <span class="badge bg-secondary mb-3">
+            Mac
+        </span>
+
+        <h3 class="text-primary mb-4">
+            $2499
+        </h3>
+
+        <h5>Description</h5>
+
+        <p>
+            Apple M4 Pro chip,
+            18GB RAM,
+            512GB SSD.
+            Designed for professional developers,
+            designers and creators.
+        </p>
+
+        <div class="mt-4">
+
+            <a
+                    href="/edit/1"
+                    class="btn btn-warning"
+            >
+                Edit Product
+            </a>
+
+            <a
+                    href="/"
+                    class="btn btn-secondary"
+            >
+                Back to Catalog
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

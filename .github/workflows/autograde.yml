@@ -1,0 +1,32 @@
+name: Autograding
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  basic-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check required project structure
+        run: |
+          echo "Checking required files and folders..."
+
+          test -f README.md || (echo "Missing README.md" && exit 1)
+          test -d src || (echo "Missing src/ folder" && exit 1)
+          test -d report || (echo "Missing report/ folder" && exit 1)
+
+          SRC_FILE_COUNT=$(find src -type f | wc -l)
+
+          if [ "$SRC_FILE_COUNT" -eq 0 ]; then
+            echo "src/ folder is empty. Add your project source code."
+            exit 1
+          fi
+
+          echo "Basic structure check passed."
