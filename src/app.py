@@ -17,12 +17,12 @@ def get_db_connection():
 # Shows all products, with optional search and category filter.
 @app.route("/")
 def home():
-    search = request.args.get("search", "").strip()      # ?search=iphone
-    category = request.args.get("category", "").strip()  # ?category=Mac
+    search   = request.args.get("search", "").strip()
+    category = request.args.get("category", "").strip()
+    sort     = request.args.get("sort", "asc")
 
     connection = get_db_connection()
 
-    # Build the query dynamically based on what the user typed
     query = "SELECT * FROM products WHERE 1=1"
     params = []
 
@@ -33,6 +33,11 @@ def home():
     if category:
         query += " AND category = ?"
         params.append(category)
+
+    if sort == "asc":
+        query += " ORDER BY price ASC"
+    elif sort == "desc":
+        query += " ORDER BY price DESC"
 
     products = connection.execute(query, params).fetchall()
 
@@ -49,6 +54,7 @@ def home():
         categories=categories,
         search=search,
         selected_category=category,
+        sort=sort,
     )
 
 

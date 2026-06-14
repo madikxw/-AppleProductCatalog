@@ -25,7 +25,14 @@ Home - Product Catalog
             >
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-2">
+            <select name="sort" class="form-select" onchange="this.form.submit()">
+                <option value="asc"  {% if sort == 'asc' %}selected{% endif %}>Price: Low to High</option>
+                <option value="desc" {% if sort == 'desc' %}selected{% endif %}>Price: High to Low</option>
+            </select>
+        </div>
+
+        <div class="col-md-2">
             <select name="category" class="form-select" onchange="this.form.submit()">
                 <option value="">All Categories</option>
                 {% for cat in categories %}
@@ -64,10 +71,7 @@ Home - Product Catalog
             </div>
 
             <div class="card-footer d-flex gap-2">
-                <a href="/product/{{ product['id'] }}"
-                   class="btn btn-sm btn-outline-dark">
-                    Details
-                </a>
+                <a href="/product/{{ product['id'] }}" class="btn btn-sm btn-info text-white">Details</a>
                 <a href="/edit/{{ product['id'] }}" class="btn btn-sm btn-outline-primary">Edit</a>
                 <button
                         class="btn btn-sm btn-outline-danger"
