@@ -81,5 +81,73 @@ def add_product():
     return render_template("add_product.html")
 
 
+# --- Edit Product ---
+# GET  /edit/<id> → find the product, show form pre-filled with its data
+# POST /edit/<id> → save the updated data to the database
+@app.route("/edit/<int:product_id>", methods=["GET", "POST"])
+def edit_product(product_id):
+    connection = get_db_connection()
+
+    # Fetch the product we want to edit
+    # fetchone() returns a single row (or None if not found)
+    product = connection.execute(
+        "SELECT * FROM products WHERE id = ?", (product_id,)
+    ).fetchone()
+
+    if product is None:
+        connection.close()
+        return "Продукт не найден", 404
+
+    if request.method == "POST":
+        # Read the updated values from the form
+        name        = request.form.get("name", "").strip()
+        description = request.form.get("description", "").strip()
+        price       = request.form.get("price", 0)
+        category    = request.form.get("category", "").strip()
+        image_url   = request.form.get("image_url", "").strip()
+
+        # Update the existing row in the database
+        connection.execute(
+            """UPDATE products
+               SET name = ?, description = ?, price = ?, category = ?, image_url = ?
+               WHERE id = ?""",
+            (name, description, price, category, image_url, product_id)
+        )
+        connection.commit()
+        connection.close()
+
+        return redirect(url_for("home"))
+
+    # GET request — show the form with current product data
+    connection.close()
+    return render_template("edit_product.html", product=product)
+
+
+# --- Product Details ---
+@app.route("/product/<int:product_id>")
+def product_details(product_id):
+    connection = get_db_connection()
+    product = connection.execute(
+        "SELECT * FROM products WHERE id = ?", (product_id,)
+    ).fetchone()
+    connection.close()
+
+    if product is None:
+        return "Продукт не найден", 404
+
+    return render_template("product_details.html", product=product)
+
+
+# --- Delete Product ---
+# POST /delete/<id> → delete the product from DB → redirect to home
+@app.route("/delete/<int:product_id>", methods=["POST"])
+def delete_product(product_id):
+    connection = get_db_connection()
+    connection.execute("DELETE FROM products WHERE id = ?", (product_id,))
+    connection.commit()
+    connection.close()
+    return redirect(url_for("home"))
+
+
 if __name__ == "__main__":
     app.run(debug=True)

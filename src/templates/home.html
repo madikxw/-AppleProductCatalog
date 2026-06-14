@@ -64,6 +64,7 @@ Home - Product Catalog
             </div>
 
             <div class="card-footer d-flex gap-2">
+                <a href="/product/{{ product['id'] }}" class="btn btn-sm btn-info text-white">Details</a>
                 <a href="/edit/{{ product['id'] }}" class="btn btn-sm btn-outline-primary">Edit</a>
                 <button
                         class="btn btn-sm btn-outline-danger"
@@ -110,6 +111,7 @@ Home - Product Catalog
         </div>
     </div>
 </div>
+
 <!-- Wire up the delete modal with the correct product -->
 <script>
     const deleteModal = document.getElementById('deleteModal');
