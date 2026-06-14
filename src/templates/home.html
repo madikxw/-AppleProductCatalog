@@ -64,7 +64,10 @@ Home - Product Catalog
             </div>
 
             <div class="card-footer d-flex gap-2">
-                <a href="/product/{{ product['id'] }}" class="btn btn-sm btn-info text-white">Details</a>
+                <a href="/product/{{ product['id'] }}"
+                   class="btn btn-sm btn-outline-dark">
+                    Details
+                </a>
                 <a href="/edit/{{ product['id'] }}" class="btn btn-sm btn-outline-primary">Edit</a>
                 <button
                         class="btn btn-sm btn-outline-danger"
