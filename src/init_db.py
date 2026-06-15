@@ -17,33 +17,7 @@ cursor.execute("""
                """)
 
 sample_products = [
-<<<<<<< HEAD
-    ("iPhone 15 Pro", "A17 Pro chip, titanium design, 48MP camera system.", 999.99, "iPhone",
-     "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-naturaltitanium?wid=200"),
-    ("MacBook Air M3", "Supercharged by M3, up to 18 hours battery life.", 1099.00, "Mac",
-     "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-midnight-select-20220606?wid=200"),
-    ("iPad Pro 13\"", "The ultimate iPad experience with M4 chip.", 1299.00, "iPad",
-     "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-pro-finish-unselect-gallery-1-202405?wid=200"),
-    ("Apple Watch Series 9", "Smarter. Brighter. Mightier.", 399.00, "Watch",
-     "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MR9A3ref_VW_34FR+watch-45-alum-midnight-nc-9s_VW_34FR_WF_CO?wid=200"),
-    ("AirPods Pro (2nd gen)", "Adaptive Audio. Now in USB-C.", 249.00, "AirPods",
-     "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQD83?wid=200"),
 
-    ("Apple Vision Pro", "Revolutionary spatial computer with immersive experiences.", 3499.00, "Vision",
-     "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/vision-pro-gallery-1?wid=200"),
-
-    ("Mac Mini M4", "Compact desktop powered by Apple Silicon.", 699.00, "Mac",
-     "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-mini-select-202410?wid=200"),
-
-    ("iPhone 16 Pro", "Next-generation iPhone with enhanced AI features.", 1199.00, "iPhone",
-     "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-pro-finish-select?wid=200"),
-
-    ("Apple Watch Ultra 2", "The most rugged and capable Apple Watch.", 799.00, "Watch",
-     "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-ultra-2?wid=200"),
-
-    ("Magic Keyboard", "Wireless keyboard with Touch ID for Mac.", 199.00, "Accessories",
-     "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MK2A3?wid=200"),
-=======
     # iPhone
     ("iPhone 16 Pro Max", "A18 Pro chip, 5x optical zoom, titanium design, 6.9\" display.", 1199.00, "iPhone",
      "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-pro-finish-select-202409-6-9inch-deserttitanium?wid=400"),
@@ -105,7 +79,6 @@ sample_products = [
      "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/apple-pencil-pro-select-202405?wid=400"),
     ("Magic Keyboard with Touch ID", "Wireless keyboard with Touch ID and numeric keypad.", 179.00, "Accessories",
      "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MK2C3?wid=400"),
->>>>>>> fc1e9bab5675c635218cadd348705367d3deab5d
 ]
 
 cursor.executemany("""
