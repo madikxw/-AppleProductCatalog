@@ -154,6 +154,10 @@ def delete_product(product_id):
     connection.close()
     return redirect(url_for("home"))
 
+@app.route("/test")
+def test():
+    return "Flask works!"
+
 
 if __name__ == "__main__":
     app.run(debug=True)
