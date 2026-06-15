@@ -17,6 +17,7 @@ cursor.execute("""
                """)
 
 sample_products = [
+
     # iPhone
     ("iPhone 16 Pro Max", "A18 Pro chip, 5x optical zoom, titanium design, 6.9\" display.", 1199.00, "iPhone",
      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR79BrGwdidUTdJjXTYdc7iJe7XlCcOqgKEWQ&s"),
