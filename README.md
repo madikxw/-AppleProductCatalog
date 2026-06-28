@@ -1,4 +1,4 @@
-Apple Product Catalog
+🍎 Apple Product Catalog
 
 A Flask-based web application for browsing and managing a catalogue of Apple products with search, filtering, sorting, and full CRUD operations.
 
@@ -6,39 +6,42 @@ Educational Practice Project · Astana IT University · 2026
 
 ⸻
 
-Student Information
+👨‍💻 Author
 
-Field	Details
-Student	Bissentayev Madiyar
-Academic Group	First Year · Web Development
-Project Type	Individual Educational Practice Project
-Project Topic	Apple Product Catalog — E-commerce Catalogue Management System
+Bissentayev Madiyar
 
-⸻
-
-Project Description
-
-The Apple Product Catalog is a full-stack web application that demonstrates the fundamentals of web development using Python, Flask, and SQLite. The application follows a three-layer architecture:
-
-* Presentation Layer: Jinja2 templates with Bootstrap 5 for a responsive and user-friendly interface.
-* Application Layer: Flask routes handling HTTP requests and business logic.
-* Data Layer: SQLite database using parameterized SQL queries for secure data access.
-
-Core Features
-
-1. Browse all Apple products.
-2. Search products by name and description.
-3. Filter products by category.
-4. Sort products by price.
-5. View detailed information about each product.
-6. Add new products.
-7. Edit existing products.
-8. Delete products with confirmation.
-9. Store all data in a SQLite database.
+First-Year Student
+Astana IT University
 
 ⸻
 
-Technology Stack
+📖 Project Overview
+
+Apple Product Catalog is a full-stack web application developed using Python, Flask, and SQLite. The project demonstrates the implementation of CRUD operations, searching, filtering, sorting, and database management within a modern web application.
+
+The application follows a three-layer architecture:
+
+* 🎨 Presentation Layer — HTML, Bootstrap 5, Jinja2
+* ⚙️ Application Layer — Flask
+* 💾 Data Layer — SQLite
+
+⸻
+
+✨ Features
+
+* 📱 Browse Apple products
+* 🔍 Search by product name and description
+* 🗂 Filter products by category
+* 💲 Sort products by price
+* 📄 View product details
+* ➕ Add new products
+* ✏️ Edit existing products
+* 🗑 Delete products with confirmation
+* 💾 SQLite database persistence
+
+⸻
+
+🛠 Technologies
 
 * Python 3
 * Flask
@@ -48,34 +51,27 @@ Technology Stack
 * Bootstrap 5
 * Jinja2
 * pytest
-* Git & GitHub
+* Git
 * GitHub Actions
 
 ⸻
 
-How to Run
+🚀 Getting Started
 
-Prerequisites
-
-* Python 3.7 or newer
-* pip
-
-Installation
-
-Clone the repository:
+Clone the repository
 
 git clone https://github.com/YOUR_USERNAME/apple-product-catalog.git
 cd apple-product-catalog
 
-Install dependencies:
+Install dependencies
 
 pip install -r requirements.txt
 
-Initialize the database:
+Initialize the database
 
 python src/init_db.py
 
-Run the application:
+Run the application
 
 python src/app.py
 
@@ -85,35 +81,28 @@ http://127.0.0.1:5000
 
 ⸻
 
-Project Structure
+📂 Project Structure
 
-(Add your project structure image here.)
+(Insert your project structure image here.)
 
 ⸻
 
-Features
+🔍 Search & Filtering
 
-Search & Filter
+The application allows users to:
 
-* Search products by both name and description.
-* Filter products by category.
-* Sort products by price.
-* Combine search, filter, and sorting in a single request.
+* Search products by name and description
+* Filter products by category
+* Sort products by price (ascending or descending)
+* Combine all filters in a single request
 
-CRUD Operations
+⸻
 
-* Add new products.
-* Edit existing products.
-* Delete products using a confirmation dialog.
-* View detailed product information.
+💾 Database
 
-Database
+Database: SQLite
 
-The application uses SQLite.
-
-Table:
-
-products
+Table: products
 
 Columns:
 
@@ -128,70 +117,59 @@ The database contains 25 sample Apple products.
 
 ⸻
 
-Architecture
+🧪 Testing
 
-(Add your architecture diagram here.)
-
-⸻
-
-Running Tests
-
-Run:
+Run all tests:
 
 pytest tests/
 
-The automated tests verify:
+The test suite validates:
 
 * Repository structure
-* Application functionality
-* CRUD operations
+* CRUD functionality
+* Application behavior
 
 ⸻
 
-Development Challenges
+⚡ Challenges
 
-During development I encountered several challenges:
+During development, several challenges were encountered:
 
-* Learning Flask and understanding request routing.
-* Designing the SQLite database.
-* Integrating the backend with Jinja2 templates.
-* Implementing search, filtering, and sorting using SQL queries.
-* Configuring GitHub Actions for automated checks.
-* Testing the application and fixing discovered issues.
-
-⸻
-
-Future Improvements
-
-* User authentication.
-* Role-based authorization.
-* Pagination.
-* Better UI/UX.
-* SQLAlchemy ORM.
-* REST API.
-* More automated tests.
+* Learning Flask
+* Designing the database
+* Connecting backend and frontend
+* Implementing SQL search and filtering
+* Configuring GitHub Actions
+* Testing and debugging the application
 
 ⸻
 
-Demo Video
+🚀 Future Improvements
 
-The demonstration video presents the application, explains its features, and shows the implementation of CRUD operations, search, filtering, and sorting.
-
-Demo Link:
-
-Replace with your Google Drive or YouTube link.
+* User authentication
+* Role-based authorization
+* SQLAlchemy ORM
+* REST API
+* Pagination
+* Improved UI/UX
+* Additional automated tests
 
 ⸻
 
-Report
+🎥 Demo Video
 
-The project report includes:
+Demo:
+https://drive.google.com/file/d/1_UIx2RI2GIn9vjqVWzZf06OIkQEGHCri/view
+
+⸻
+
+📄 Report
+
+The report includes:
 
 * Project overview
-* Problem statement
-* Technologies used
+* System architecture
 * Database design
-* Application architecture
 * Implementation details
 * Screenshots
 * Testing
@@ -199,8 +177,6 @@ The project report includes:
 
 ⸻
 
-GitHub Repository
-
-Repository:
+🔗 GitHub Repository
 
 https://github.com/YOUR_USERNAME/apple-product-catalog
