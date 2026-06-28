@@ -154,12 +154,7 @@ During development, several challenges were encountered:
 * Improved UI/UX
 * Additional automated tests
 
-⸻
 
-🎥 Demo Video
-
-Demo:
-https://drive.google.com/file/d/1_UIx2RI2GIn9vjqVWzZf06OIkQEGHCri/view
 
 ⸻
 
@@ -179,4 +174,4 @@ The report includes:
 
 🔗 GitHub Repository
 
-https://github.com/YOUR_USERNAME/apple-product-catalog
+https://github.com/madikxw/apple-product-catalog
