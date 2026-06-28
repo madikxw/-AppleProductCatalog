@@ -60,7 +60,7 @@ The application follows a three-layer architecture:
 
 Clone the repository
 
-git clone https://github.com/YOUR_USERNAME/apple-product-catalog.git
+git clone https://github.com/madikxw/-AppleProductCatalog.git
 cd apple-product-catalog
 
 Install dependencies
@@ -174,4 +174,4 @@ The report includes:
 
 🔗 GitHub Repository
 
-https://github.com/madikxw/apple-product-catalog
+https://github.com/madikxw/-AppleProductCatalog
